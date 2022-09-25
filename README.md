@@ -64,3 +64,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Database Migrations
+
+You need to connect into the sail container. Follow these steps
+1) List containers:```docker ps```
+2) exec into the desired sail container```docker exec -it <container id> /bin/bash```
+3) exec migrate: ```php artisan migrate```
+4) to exit the container: ```exit```
+
+If you want to check on prior migrations run: ```php artisan migrate:status```
